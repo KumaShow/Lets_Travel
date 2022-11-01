@@ -1,0 +1,110 @@
+---
+title: Let's Travel!
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="container py-lg-120">
+  <!-- 新增旅遊套票 -->
+  <section class="row justify-content-center align-items-center py-md-60 mb-lg-100 addTicket">
+    <div class="col-10">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 text-center" data-aos="fade-right" data-aos-delay="100" data-aos-duration="700">
+          <img src="./assets/images/undraw_Traveling_re_weve.png" alt="Logo">
+          <img src="./assets/images/Let’s_Travel.png" alt="Let’s Travel">
+        </div>
+
+        <div class="col-lg-6"  data-aos="fade-left" data-aos-delay="100" data-aos-duration="700">
+          <h1 class="text-primary fs-4 fw-bold d-flex align-items-center me-1 mb-10 p-1 border-bottom border-3 border-primary">
+            <span class="material-symbols-outlined">add_circle</span>
+            新增旅遊套票
+          </h1>
+          <form action="">
+            <ul class="list-unstyled mb-8">
+              <li class="row mb-5 align-items-center">
+                <label for="ticketName" class="fs-6 col-md-3 text-primary">套票名稱</label>
+                <div class="col-md-9">
+                  <input type="text" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary" id="ticketName" placeholder="請填寫套票名稱">
+                </div>
+              </li>
+  
+              <li class="row mb-5 align-items-center">
+                <label for="ticketImgUrl" class="fs-6 col-md-3 text-primary">圖片網址</label>
+                <div class="col-md-9">
+                  <input type="text" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary" id="ticketImgUrl" placeholder="請填寫圖片位置">
+                </div>
+              </li>
+  
+              <li class="row align-items-center mb-5">
+                <label for="scenicArea" class="col-md-3 text-primary">景點地區</label>
+                <div class="col-md-9">
+                  <select id="scenicArea" class="form-select form-select-sm px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary w-100">
+                    <option value="" disabled selected hidden>請選擇景點地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="高雄">高雄</option>
+                  </select>
+                </div>
+              </li>
+  
+              <li class="row mb-5 align-items-center">
+                <label for="ticketPrice" class="fs-6 col-md-3 text-primary">套票金額</label>
+                <div class="col-md-9">
+                  <input type="number" class="w-100 form-control-sm lh-lg px-3 py-2  bg-light border-0 rounded-0 border-bottom border-primary" id="ticketPrice" placeholder="請填寫套票金額">
+                </div>
+              </li>
+  
+              <li class="row mb-5 align-items-center">
+                <label for="ticketNum" class="fs-6 col-md-3 text-primary">套票組數</label>
+                <div class="col-md-9">
+                  <input type="number" class="w-100 form-control-sm lh-lg px-3 py-2  bg-light border-0 rounded-0 border-bottom border-primary" id="ticketNum" placeholder="請填寫套票組數">
+                </div>
+              </li>
+  
+              <li class="row mb-5 align-items-center">
+                <label for="ticketRank" class="fs-6 col-md-3 text-primary">套票星級</label>
+                <div class="col-md-9">
+                  <input type="number" class="w-100 form-control-sm lh-lg px-3 py-2  bg-light border-0 rounded-0 border-bottom border-primary" id="ticketRank" placeholder="請填寫套票星級">
+                </div>
+              </li>
+  
+              <li class="row mb-5">
+                <label for="ticketDescribe" class="fs-6 col-md-3 text-primary">套票描述</label>
+                <div class="col-md-9">
+                  <textarea type="text" class="w-100 form-control-sm lh-lg px-3 py-2  bg-light border-0 rounded-0 border-bottom border-primary" id="ticketDescribe" maxlength="100" placeholder="請填寫套票描述 (限 100 字)" style="height: 100px;resize: none;"></textarea>
+                </div>
+              </li>
+            </ul>
+            <div class="d-flex flex-row-reverse">
+              <input type="button" id="btnAddTicket" class="fs-5 fw-light px-11 py-14 btn-primary border-0 rounded-3" value="新增套票">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 旅遊資訊區 -->
+  <section>
+    <!-- search bar -->
+    <div class="d-md-flex align-items-center text-center mb-13 ms-80" data-aos="fade-up" data-aos-duration="500">
+      <select id="searchArea" class="fw-light text-dark px-3 py-2 me-md-9 mb-5 mb-md-0 border-gray rounded-2 search-select">
+        <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+        <option value="全部地區">全部地區</option>
+        <option value="台北">台北</option>
+        <option value="台中">台中</option>
+        <option value="高雄">高雄</option>
+      </select>
+
+      <p class="text-dark fw-light" id="searchResult">本次搜尋共 0 筆資料</p>
+    </div>
+
+    <ul class="row g-4 list-unstyled" id="ticketList"></ul>
+
+    <div class="text-center d-none" id="emptyResult">
+      <h3 class="mb-11">查無地區資料</h3>
+      <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/no_found.png?raw=true" alt="找不到資料">
+    </div>
+  </section>
+</div>
