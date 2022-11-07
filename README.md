@@ -9,6 +9,7 @@
   1. 箭頭函式寫法
   2. 陣列 filter、forEach
   3. 函式處理分 render 與運算
+
 第六週
   1. 新增 axios 套件，抓取外部 JSON 資料
 
