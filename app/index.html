@@ -20,24 +20,33 @@ current: index
             <span class="material-symbols-outlined">add_circle</span>
             新增旅遊套票
           </h1>
-          <form action="">
+          <form>
             <ul class="list-unstyled mb-8">
               <li class="row mb-5 align-items-center">
-                <label for="ticketName" class="fs-6 col-md-3 text-primary">套票名稱</label>
+                <div class="col-md-3 form-label">
+                  <label for="ticketName" class="fs-6 text-primary">套票名稱</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <input type="text" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary input" id="ticketName" placeholder="請填寫套票名稱">
                 </div>
               </li>
   
               <li class="row mb-5 align-items-center">
-                <label for="ticketImgUrl" class="fs-6 col-md-3 text-primary">圖片網址</label>
+                <div class="col-md-3">
+                  <label for="ticketImgUrl" class="fs-6 text-primary">圖片網址</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <input type="text" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary input" id="ticketImgUrl" placeholder="請填寫圖片位置">
                 </div>
               </li>
   
               <li class="row align-items-center mb-5">
-                <label for="scenicArea" class="col-md-3 text-primary">景點地區</label>
+                <div class="col-md-3">
+                  <label for="scenicArea" class="text-primary">景點地區</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <select id="scenicArea" class="form-select form-select-sm px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary w-100 input">
                     <option value="" disabled selected hidden>請選擇景點地區</option>
@@ -49,28 +58,40 @@ current: index
               </li>
   
               <li class="row mb-5 align-items-center">
-                <label for="ticketPrice" class="fs-6 col-md-3 text-primary">套票金額</label>
+                <div class="col-md-3">
+                  <label for="ticketPrice" class="fs-6 text-primary">套票金額</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <input type="number" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary input" min="0" id="ticketPrice" placeholder="請填寫套票金額">
                 </div>
               </li>
   
               <li class="row mb-5 align-items-center">
-                <label for="ticketNum" class="fs-6 col-md-3 text-primary">套票組數</label>
+                <div class="col-md-3">
+                  <label for="ticketNum" class="fs-6 text-primary">套票組數</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <input type="number" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary input" min="0" id="ticketNum" placeholder="請填寫套票組數">
                 </div>
               </li>
   
               <li class="row mb-5 align-items-center">
-                <label for="ticketRank" class="fs-6 col-md-3 text-primary">套票星級</label>
+                <div class="col-md-3">
+                  <label for="ticketRank" class="fs-6 text-primary">套票星級</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <input type="number" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary input" min="1" max="10" id="ticketRank" placeholder="請填寫套票星級">
                 </div>
               </li>
   
               <li class="row mb-5">
-                <label for="ticketDescribe" class="fs-6 col-md-3 text-primary">套票描述</label>
+                <div class="col-md-3">
+                  <label for="ticketDescribe" class="fs-6 text-primary">套票描述</label>
+                  <span class="required d-none">必填 !</span>
+                </div>
                 <div class="col-md-9">
                   <textarea type="text" class="w-100 form-control-sm lh-lg px-3 py-2 bg-light border-0 rounded-0 border-bottom border-primary input" id="ticketDescribe" maxlength="100" placeholder="請填寫套票描述 (限 100 字)" style="height: 100px;resize: none;"></textarea>
                 </div>
@@ -97,8 +118,10 @@ current: index
         <option value="高雄">高雄</option>
       </select>
 
-      <p class="text-dark fw-light" id="searchResult">本次搜尋共 0 筆資料</p>
+      <p class="text-dark fw-light me-auto" id="searchResult">本次搜尋共 0 筆資料</p>
+      <div id="chart" class="chart"></div>
     </div>
+
 
     <ul class="row g-4 list-unstyled" id="ticketList"></ul>
 
