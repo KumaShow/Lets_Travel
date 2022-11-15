@@ -5,12 +5,15 @@
 ## 說明
 
 學習目標
-  1. 箭頭函式寫法
-  2. 陣列 filter、forEach
-  3. 函式處理分 render 與運算
+
+1. 箭頭函式寫法
+2. 陣列 filter、forEach
+3. 函式處理分 render 與運算
 
 額外練習
-  1. AOS 動畫
+
+1. AOS 動畫
 
 ### 網頁畫面
+
 > [Demo](https://kumashow.github.io/Lets_Travel/)
