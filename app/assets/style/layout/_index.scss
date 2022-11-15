@@ -6,7 +6,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media (min-width: 576px) {
+  @include respond-min(sm) {
     padding-top: 30;
     padding-bottom: 30;
   }
@@ -15,7 +15,7 @@
 .ms-lg-80 {
   margin-left: 0px;
 
-  @media (min-width: 768px) {
+  @include respond-min(md) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -24,7 +24,7 @@
 .mb-lg-100 {
   margin-bottom: 60px;
 
-  @media (min-width: 768px) {
+  @include respond-min(md) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -34,12 +34,12 @@
   padding-top: 0px;
   padding-bottom: 0px;
 
-  @media (min-width: 768px) {
+  @include respond-min(md) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  @media (min-width: 992px) {
+  @include respond-min(xl) {
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -54,6 +54,12 @@
   font-family: Roboto;
 }
 
+.required {
+  display: inline-block;
+  color: $danger;
+  font-size: 14px;
+}
+
 .ticket-img {
   object-fit: cover;
   transition: all .3s ease;
@@ -64,7 +70,6 @@
 }
 
 .addTicket {
-  // border: ;
   border-radius: 12px;
   box-shadow: 0px 3px 6px #00000029;
 }
@@ -77,9 +82,24 @@
 
 .search-select {
   width: 75%;
-  
-  @media (min-width: 768px) {
+
+  @include respond-min(md) {
     width: 30%;
     margin-left: 10%;
   }
+}
+
+.form-label {
+  position: relative;
+  vertical-align: center;
+}
+.required {
+  position: absolute;
+  @include respond-min(md) {
+    display: block;
+  }
+}
+
+.c3-chart-arc text {
+  fill: #000;
 }
