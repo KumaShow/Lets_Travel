@@ -15340,7 +15340,7 @@ body {
   padding-bottom: 60px;
 }
 
-@media (min-width: 576px) {
+@media only screen and (min-width: 576px) {
   .py-md-60 {
     padding-top: 30;
     padding-bottom: 30;
@@ -15351,7 +15351,7 @@ body {
   margin-left: 0px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .ms-lg-80 {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -15362,7 +15362,7 @@ body {
   margin-bottom: 60px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .mb-lg-100 {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -15374,14 +15374,14 @@ body {
   padding-bottom: 0px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .py-lg-120 {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .py-lg-120 {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -15394,6 +15394,12 @@ body {
 
 .font-roboto {
   font-family: Roboto;
+}
+
+.required {
+  display: inline-block;
+  color: #dc3545;
+  font-size: 14px;
 }
 
 .ticket-img {
@@ -15429,11 +15435,30 @@ body {
   width: 75%;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .search-select {
     width: 30%;
     margin-left: 10%;
   }
+}
+
+.form-label {
+  position: relative;
+  vertical-align: center;
+}
+
+.required {
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+  .required {
+    display: block;
+  }
+}
+
+.c3-chart-arc text {
+  fill: #000;
 }
 
 /*# sourceMappingURL=all.css.map */
