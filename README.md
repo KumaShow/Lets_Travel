@@ -6,6 +6,9 @@
 
 > [Demo](https://kumashow.github.io/Lets_Travel/)
 
+![](https://imgur.com/iNLyX5al.png)
+![](https://imgur.com/wF3yzTTl.png)
+
 ## 說明
 
 ### 學習目標
